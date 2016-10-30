@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Unix</string>
+    <string name="login">Log In</string>
+    <string name="contactus">Contact Us</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="invalid">Invalid UserName/Password</string>
+    <string name="ok">ok</string>
 </resources>
