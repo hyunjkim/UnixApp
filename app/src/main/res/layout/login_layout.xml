@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/unix_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/unixcctvbackground">
+
+    <EditText
+        android:id="@+id/username_input"
+        android:hint="@string/username"
+        android:inputType="textWebEmailAddress"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:background="@drawable/border"
+        android:layout_above="@+id/password_input"
+        android:layout_alignLeft="@+id/password_input"
+        android:layout_alignStart="@+id/password_input"
+        android:windowSoftInputMode = "adjustResize"
+        android:nextFocusForward="@id/password_input"
+        android:layout_marginBottom="7dp"
+        android:imeOptions="actionDone"/>
+
+    <EditText
+        android:id="@+id/password_input"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:background="@drawable/border"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:windowSoftInputMode = "adjustResize"
+        android:imeOptions="actionDone"/>
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="@string/login"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/password_input"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/contactusbtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="@string/contactus"
+        android:background="@drawable/border"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/loginbtn"
+        android:layout_alignLeft="@+id/loginbtn" />
+
+
+</RelativeLayout>
