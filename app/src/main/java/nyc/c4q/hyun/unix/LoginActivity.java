@@ -15,6 +15,8 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 
+import nyc.c4q.hyun.unix.products.UnixPageActivity;
+
 
 /**
  * Created by Hyun on 10/28/16.

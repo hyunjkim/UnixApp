@@ -1,4 +1,4 @@
-package nyc.c4q.hyun.unix;
+package nyc.c4q.hyun.unix.products;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.Arrays;
 import java.util.List;
 
-import nyc.c4q.hyun.unix.products.Products;
+import nyc.c4q.hyun.unix.R;
 
 /**
  * Created by Hyun on 10/29/16.
@@ -23,7 +23,6 @@ public class ProductListAdapter extends RecyclerView.Adapter {
             new Products("Ring", R.drawable.ringdoorbells),
             new Products("Rack", R.drawable.rackcabinets)
     );
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ProductViewHolder(parent);
@@ -32,34 +31,30 @@ public class ProductListAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ProductViewHolder viewHolder = (ProductViewHolder) holder;
-        Product employee = mData.get(position);
-        viewHolder.bind(employee);
-        viewHolder.setOnClickListener(buildEmployeeClickListener(employee));
+        Products products = mData.get(position);
+        viewHolder.bind(products);
+        viewHolder.setOnClickListener(buildProductClickListener(products));
     }
 
-    private View.OnClickListener buildEmployeeClickListener(Product employee) {
-        if (employee != null){
-            return navigateToEmployeeViewListener(employee.getName());
+    private View.OnClickListener buildProductClickListener(Products products) {
+        if (products != null){
+            return navigateToProductViewListener(products.getName());
         }
         return defaultClickListener();
     }
-
     /**
-     * This click listener launches an intent with the employee name as an extra
-     * @param name
-     * @return
+     * This click listener launches an intent with the products name as an extra
      */
-    private View.OnClickListener navigateToEmployeeViewListener(final String name) {
+    private View.OnClickListener navigateToProductViewListener(final String name) {
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ProductView.class);
-                intent.putExtra(ProductView.EMPLOYEE_NAME, name);
+                intent.putExtra(ProductView.PRODUCT_NAME, name);
                 view.getContext().startActivity(intent);
             }
         };
     }
-
     /*
      The default click listener does nothing;
      */

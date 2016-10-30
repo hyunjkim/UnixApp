@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustResize">
 
-        <activity android:name=".UnixPageActivity"></activity>
+        <activity android:name=".products.UnixPageActivity"></activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
