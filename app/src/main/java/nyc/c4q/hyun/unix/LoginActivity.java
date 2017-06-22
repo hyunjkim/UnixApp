@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
     private void loggingIn() {
-        if (usernameInput.getText().toString().equals("ashiqueisthebest@gmail.com") && passwordInput.getText().toString().equals("yahh")) {
+        if (usernameInput.getText().toString().equals("ash@gmail.com") && passwordInput.getText().toString().equals("yahh")) {
             Log.d("Hyun", "Reaches3");
             Intent mainPage = new Intent(this, UnixPageActivity.class);
             startActivity(mainPage);
